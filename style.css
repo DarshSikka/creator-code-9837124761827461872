@@ -1,0 +1,33 @@
+body{
+    background-color:whitesmoke;
+}
+ul{
+    list-style-type: none;
+    float:top;
+    display:inline;
+}
+li{
+      float:left;
+}
+li a{
+
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration:underline;
+}
+.art{
+    margin-left:20px;text-decoration:underline;
+    color:darkblue;
+}
+#toplow{
+    margin-top:80px;
+}
+#Home{
+    margin-top:50px;
+}
+h1{
+    margin-left:20px;
+    color:chocolate;
+}

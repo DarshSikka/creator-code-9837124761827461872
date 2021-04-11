@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<style>
+#pa{
+    width:40%;
+    text-align: center;
+    padding: 16px;
+    float:left;
+    margin-left:80px;
+}
+body{
+display:inline;
+}
+#pb{
+    text-align: center;
+    padding: 16px;
+    float:right;
+    margin-left:80px;
+}
+.art{
+    color:purple;
+    font-size:30px;
+}
+h1{
+    margin-left:200px;
+}
+</style>
+<body><span><div id="pa" style="display:block;">
+    <script>document.getElementById("pa").innerHTML+=localStorage.getItem("art")</script>
+</div>
+<div id="pb" style="display:block;width:40%;float:right;"><h1>Read more</h1></div>
+<script>category=localStorage.getItem("cat")
+console.log(category)
+List=JSON.parse(localStorage.getItem(category))
+for(var a=0;a<Object.keys(List).length;a++){
+    console.log(List[a][String(Object.keys(List[a]))])
+    line = "<a class='art' name='" + List[a][String(Object.keys(List[a]))]+ "'onclick=nav(this.name,'"+category+"')>" +String(Object.keys(List[a]))+ "</a><br><br><br><br>"
+    document.getElementById("pb").innerHTML+=line;
+}
+function nav(html, cat) {
+      localStorage.setItem("art", html);
+      localStorage.setItem("cat", String(cat));
+      window.location = "article.html";
+    }</script>
+</span></body>
+</html>
